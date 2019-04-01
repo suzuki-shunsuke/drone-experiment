@@ -1,0 +1,10 @@
+---
+kind: pipeline
+name: build
+steps:
+- name: test
+  image: plugins/git
+  commands:
+  - git remote
+  - git branch
+  - git status
