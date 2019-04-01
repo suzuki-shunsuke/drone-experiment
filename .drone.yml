@@ -5,6 +5,5 @@ steps:
 - name: test
   image: plugins/git
   commands:
-  - git remote
-  - git branch
-  - git status
+  - git fetch
+  - git checkout -b master origin/master
