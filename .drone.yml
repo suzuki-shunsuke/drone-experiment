@@ -1,9 +1,17 @@
----
-kind: pipeline
-name: build
-steps:
-- name: test
-  image: plugins/git
-  commands:
-  - git fetch
-  - git checkout -b master origin/master
+local Pipeline(version) = {
+  kind: "pipeline",
+  steps: [
+    {
+      name: "build",
+      image: "golang:"+version,
+      commands: [
+        "echo hello",
+      ]
+    }
+  ]
+};
+
+[
+  Pipeline("1.0"),
+  Pipeline("1,1")
+]
