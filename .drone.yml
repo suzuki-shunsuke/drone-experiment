@@ -1,0 +1,10 @@
+---
+pipeline:
+  hello:
+    image: alpine:3.9.4
+    commands:
+    - echo ${A}
+matrix:
+  A:
+  - 1
+  - 2
