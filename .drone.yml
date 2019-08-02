@@ -1,6 +1,0 @@
----
-pipeline:
-  clone:
-    image: plugins/git
-    commands:
-    - echo hello
